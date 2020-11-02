@@ -1,0 +1,125 @@
+.black_bg{
+    background: #000000;
+}
+.service_area{
+    padding-top: 200px;
+    padding-bottom: 170px;
+    position: relative;
+    @media #{$mobile_device}{
+       padding-top: 60px;
+       padding-bottom: 60px;
+    }
+    @media #{$tablet_device}{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    @media #{$mid_device}{
+        padding-top: 100px;
+    }
+    .opacity_text{
+        color: #0A0A0A;
+    }
+    .single_service{
+        border: 1px solid #333333;
+        padding: 45px 40px 65px 40px;
+        @include transition(.3s);
+        margin-bottom: 30px;
+        .icon{
+
+        }
+        h3{
+            font-size: 26px;
+            color: #fff;
+            font-weight: 500;
+            margin-top: 24px;
+            margin-bottom: 15px;
+        }
+        p{
+            margin-bottom: 0;
+            font-size: 16px;
+            line-height: 28px;
+            color: #fff;
+        }
+        &:hover{
+            border: 1px solid #808080;
+        }
+    }
+}
+.service2_area{
+    .single_service{
+        border: 1px solid #E2E2E2;
+        padding: 45px 40px 65px 40px;
+        @include transition(.3s);
+        margin-bottom: 30px;
+        .icon{
+
+        }
+        h3{
+            font-size: 26px;
+            color: #1F1F1F;
+            font-weight: 500;
+            margin-top: 24px;
+            margin-bottom: 15px;
+        }
+        p{
+            margin-bottom: 0;
+            font-size: 16px;
+            line-height: 28px;
+            color: #727272;
+        }
+        &:hover{
+            border: 1px solid #919191;
+        }
+    }
+}
+.brand_area {
+    padding-top: 170px;
+    &.minus_padding{
+        padding-top: 120px;
+        @media #{$mobile_device} {
+            padding-top: 30px;
+        }
+        @media #{$tablet_device} {
+            padding-top: 50px;
+        }
+        @media #{$mid_device} {
+            padding-top: 80px;
+        }
+    }
+    @media #{$mobile_device} {
+        padding-top: 30px;
+    }
+    @media #{$tablet_device} {
+        padding-top: 50px;
+    }
+    @media #{$mid_device} {
+        padding-top: 80px;
+    }
+    .brand_active{
+        &.owl-carousel .owl-item img {
+            display: inline-block;
+            width: auto;
+            -webkit-filter: contrast(.01);
+        filter: contrast(.01);
+        }
+        .single_brand{
+            text-align: center;
+            cursor: e-resize;
+            &:hover{
+                img{
+                    -webkit-filter: contrast(1);
+                    filter: contrast(1);
+                }
+            }
+        }
+    }
+}
+.Visit_Work{
+    background: #00A7FF;
+    padding: 40px 0;
+    a{
+        font-size: 26px;
+        font-weight: 500;
+        color: #fff;
+    }
+}

@@ -1,0 +1,130 @@
+.app_design_area{
+    .app_banner{
+        img{
+            width: 100%;
+        }
+    }
+    .service_wrap{
+        margin-top: 60px;
+        @media #{$mobile_device} {
+            display: block !important;
+        }
+       .single-serv{
+        @media #{$mobile_device}{
+            margin-bottom: 30px;
+        }
+           h4{
+            font-size: 16px;
+            color: #615CFD;
+            font-weight: 600;
+           }
+           p{
+            color:#1F1F1F;
+            font-size: 16px;
+            font-weight: 400;
+           }
+       } 
+    }
+    .social_link{
+        margin-top: 60px;
+        text-align: right;
+        @media #{$mobile_device}{
+            margin-top: 30px;
+            text-align: left;
+        }
+        a{
+            width: 50px;
+            height: 50px;
+            background:#3B5998;
+            text-align: center;
+            @include border-radius(50%);
+            display: inline-block;
+            color: #fff;
+            line-height: 50px;
+            margin-left: 10px;
+            &:nth-child(2){
+                background: #BD081C;
+            }
+            &:nth-child(3){
+                background: #68BBEC;
+            }
+            &:hover{
+                background: #41A3FC;
+                color: #fff;
+            }
+        }
+    }
+}
+.pro_detaols_info{
+    .border-top{
+        margin-top: 35px;
+        padding-top: 60px;
+        border-top: 1px solid #E5E5E5;
+    }
+    .live_view_btn{
+        @media #{$mobile_device} {
+            text-align: center !important;
+            margin-top: 30px;
+        }
+    }
+    .details_info{
+        h3{
+            font-size: 36px;
+            color: #1F1F1F;
+            margin-bottom: 30px;
+        }
+        p{
+            font-size: 16px;
+            color: #727272;
+            margin-bottom: 20px;
+            line-height: 28px;
+        }
+        ul{
+            margin-top: 30px;
+            li{
+                font-size: 16px;
+                color: #1F1F1F;
+                line-height: 16px;
+                position: relative;
+                z-index: 0;
+                padding-left: 30px;
+                margin-bottom: 20px;
+                &:before{
+                    position: absolute;
+                    width: 12px;
+                    height: 12px;
+                    background: #FFCB00;
+                    @include border-radius(50%);
+                    content: "";
+                    left: 0;
+                    top: 50%;
+                    @include transform(translateY(-50%));
+                }
+            }
+        }
+    }
+    .plus-padding{
+        padding-top: 200px;
+        @media #{$mobile_device} {
+            padding-top: 100px;
+        }
+    }
+    .prev_design{
+        span{
+            font-size: 16px;
+            color: #919191;
+            i{
+                color: #919191;
+                margin: 0 5px ;
+            }
+        }
+        h4{
+            font-size: 26px;
+            font-weight: 600;
+            color: #1F1F1F;
+            @media #{$mobile_device}{
+                font-size: 15px;
+            }
+        }
+    }
+}

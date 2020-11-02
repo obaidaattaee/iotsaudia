@@ -1,0 +1,96 @@
+.agency_heading{
+    padding-top: 255px;
+    padding-bottom: 160px;
+    &.minus-padd{
+        padding-bottom: 50px;
+        @media #{$mobile_device}{
+            padding-bottom: 20px;
+        }
+    }
+    position: relative;
+    @media #{$mobile_device} {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    @media #{$tablet_device} {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+    .agency_text{
+        h3{
+            font-size: 50px;
+            font-weight: 500;
+            line-height: 62px;
+            margin-bottom: 53px;
+            @media #{$mobile_device}{
+                font-size: 30px;
+                line-height: 42px;
+            }
+            span{
+                text-decoration: underline;
+            }
+        }
+    }
+    .animated_shape{
+        .anim_1{
+            position: absolute;
+            top: 35%;
+            left: 10%;
+        }
+        .anim_2{
+            position: absolute;
+            bottom: 30%;
+            right: 18%;
+        }
+    }
+}
+
+// video_area start
+.video_bg_1{
+    background-image: url(../img/about/video.png);
+}
+.video_area{
+    margin-left: 20%;
+    @media #{$mobile_device}{
+        margin-left: 0;
+    }
+    @media #{$tablet_device}{
+        margin-left: 0;
+    }
+    @media #{$mid_device}{
+        margin-left: 0;
+    }
+    @media #{$large_device}{
+        margin-left: 0;
+    }
+    .video_banner{
+        padding: 340px 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @media #{$mobile_device} {
+            padding: 230px 0;
+            background-position: left;
+        }
+        a{
+            position: absolute;
+            background: #0181F5;
+            width: 120px;
+            height: 120px;
+            text-align: center;
+            @include border_radius(50%);
+            line-height: 120px;
+            font-size: 15px;
+            color: #fff;
+            left: 0;
+            top: 50%;
+            right: 0;
+            margin: auto;
+            @include transform(translateY(-50%));
+            @media #{$mobile_device}{
+                width: 80px;
+                height: 80px;
+                line-height: 80px;
+            }
+        }
+    }
+}

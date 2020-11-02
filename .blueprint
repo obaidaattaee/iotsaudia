@@ -1,0 +1,38 @@
+created:
+    - database/factories/SettingsFactory.php
+    - database/factories/AdvantageFactory.php
+    - database/factories/StatistacFactory.php
+    - database/factories/ChanceFactory.php
+    - database/factories/GovermentRoleFactory.php
+    - database/factories/IotImageFactory.php
+    - database/factories/IotUsageFactory.php
+    - database/migrations/2020_10_25_020942_create_settings_table.php
+    - database/migrations/2020_10_25_020943_create_advantages_table.php
+    - database/migrations/2020_10_25_020944_create_statistacs_table.php
+    - database/migrations/2020_10_25_020945_create_chances_table.php
+    - database/migrations/2020_10_25_020946_create_goverment_roles_table.php
+    - database/migrations/2020_10_25_020947_create_iot_images_table.php
+    - database/migrations/2020_10_25_020948_create_iot_usages_table.php
+    - app/Models/Settings.php
+    - app/Models/Advantage.php
+    - app/Models/Statistac.php
+    - app/Models/Chance.php
+    - app/Models/GovermentRole.php
+    - app/Models/IotImage.php
+    - app/Models/IotUsage.php
+    - 'database/seeders/Iot_usage Seeder.php'
+    - 'database/seeders/Iot_image Seeder.php'
+    - 'database/seeders/Goverment_role Seeder.php'
+    - 'database/seeders/Chance Seeder.php'
+    - 'database/seeders/Statistac Seeder.php'
+    - 'database/seeders/Advantage Seeder.php'
+    - database/seeders/SettingsSeeder.php
+models:
+    Models\User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string:100 nullable' }
+    Settings: { logo_image: string, slider_title: string, video_link: string, video_background_image: string, advantage_title: string, email_address: string, mobile_address: string, location: string, facebook_address: string, twitter: string, instagram: string, youtube: string }
+    Advantage: { title: string, slug: string, description: longtext, image: string }
+    Statistac: { title: string, value: integer, color: string }
+    Chance: { title: string, slug: string, description: longtext, image: string }
+    GovermentRole: { title: string, description: longtext }
+    IotImage: { image: string }
+    IotUsage: { title: string, descritpion: longtext, image: string }

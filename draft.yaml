@@ -1,0 +1,50 @@
+models:
+  Settings:
+    logo_image: string
+    slider_title: string
+    video_link: string
+    video_background_image: string
+    advantage_title: string
+    email_address: string
+    mobile_address: string
+    location: string
+    facebook_address: string
+    twitter: string
+    instagram: string
+    youtube: string
+
+  Advantage:
+    title: string
+    slug: string
+    description: longtext
+    image: string
+
+  Statistac:
+    title: string
+    value: integer
+    color: string
+
+  Chance:
+    title: string
+    slug: string
+    description: longtext
+    image: string
+
+  GovermentRole:
+    title: string
+    description: longtext
+
+
+  IotImage:
+    image: string
+
+  IotUsage:
+    title: string
+    descritpion: longtext
+    image: string
+
+
+
+  # ...
+seeders:
+  Iot_usage , Iot_image , Goverment_role ,Chance ,Statistac ,Advantage ,Settings
