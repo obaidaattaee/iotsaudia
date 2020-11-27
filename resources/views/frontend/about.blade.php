@@ -38,5 +38,16 @@
             </div>
         </div>
     </section>
+    <section class="contact-section" style="text-align: right">
+        <div class="container">
 
+            <div class="row">
+                <div class="col-lg-12">
+                    <img src="{{  asset('uploads/public/'.$about->image_1) ?? "" }}" alt="" style="max-height: 50%; width: 100%; margin-top: 20px""><br>
+                    <img src="{{ asset('uploads/public/'.$about->image_2) ?? "" }}" alt="" style="max-height: 50%; width: 100%; margin-top: 20px""><br>
+                    <img src="{{ asset('uploads/public/'.$about->image_3) ?? "" }}" alt="" style="max-height: 50%;width: 100%; margin-top: 20px">
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection

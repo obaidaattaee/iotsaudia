@@ -13,6 +13,6 @@
 
 <li class="nav-item"><a class="nav-link" href="{{ route('usage.index') }}"><i class="la la-home nav-icon"></i> {{ __('base.usages') }}</a></li>
 
-<li class="nav-item"><a class="nav-link" href="{{ route('contacts.index') }}"><i class="la la-home nav-icon"></i> {{ __('base.contacts') }}</a></li>
+<li class="nav-item"><a class="nav-link" href="{{ route('contact.index') }}"><i class="la la-home nav-icon"></i> خريطة الموقع</a></li>
 
 <li class="nav-item"><a class="nav-link" href="{{ route('about.index') }}"><i class="la la-home nav-icon"></i> {{ "نبذه" }}</a></li>

@@ -23,7 +23,30 @@
                       <label for="vat">الوصف</label>
                         <textarea class="form-control" id="editor" name="description" type="text" placeholder="description" >{{ old('description') ?? $about->description ?? "" }}</textarea>
                     </div>
-
+                    <div class="form-group">
+                      <label for="street">الصورة الاولى</label>
+                      <input class="form-control" id="street" name="image_1_file" type="file" placeholder="Enter street name">
+                    </div>
+                    <div class="form-group">
+                      <label for="street">الصورة الحالية</label><br>
+                        <img src="{{ $about ? asset('uploads/public/'.$about->image_1) : "" }}" width="100px">
+                        </div>
+                        <div class="form-group">
+                          <label for="street">الصورة الثانية </label>
+                          <input class="form-control" id="street" name="image_2_file" type="file" placeholder="Enter street name">
+                        </div>
+                        <div class="form-group">
+                          <label for="street">الصورة الحالية</label><br>
+                            <img src="{{ $about ? asset('uploads/public/'.$about->image_2) : "" }}" width="100px">
+                            </div>
+                            <div class="form-group">
+                              <label for="street">الصورة الثالثة </label>
+                              <input class="form-control" id="street" name="image_3_file" type="file" placeholder="Enter street name">
+                            </div>
+                            <div class="form-group">
+                              <label for="street">الصورة الحالية</label><br>
+                                <img src="{{$about ?  asset('uploads/public/'.$about->image_3) : "" }}" width="100px">
+                                </div>
                     <div class="form-group">
                     	<input type="submit" value="save" class="btn btn-success">
                     </div>

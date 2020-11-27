@@ -9,6 +9,7 @@ use App\Models\About;
 use App\Models\Advantage;
 use App\Models\Chance;
 use App\Models\Contact;
+use App\Models\ContactPage;
 use App\Models\IotImage;
 use App\Models\IotUsage;
 use App\Models\Settings;
@@ -36,8 +37,10 @@ class HomePageController extends Controller
     public function contact()
     {
         $settings = Settings::first();
+        $contact = ContactPage::first();
         return view('frontend.contact')
-            ->with('settings' , $settings);
+            ->with('settings' , $settings)
+            ->with('contact' , $contact);
     }
     public function contactSave()
     {
@@ -56,7 +59,7 @@ class HomePageController extends Controller
 
     public function contacts()
     {
-        $contacts = Contact::get();
+        $contacts = ContactPage::get();
         return view('contacts.index')
             ->with('contacts' , $contacts);
     }

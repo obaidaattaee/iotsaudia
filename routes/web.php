@@ -28,6 +28,9 @@ Route::group([
     // end settings routes
     Route::get("about", [\App\Http\Controllers\Frontend\AboutController::class , 'index'])->name("about.index");
     Route::post("about", [\App\Http\Controllers\Frontend\AboutController::class , 'save'])->name("about.save");
+  
+    Route::get("contact", [\App\Http\Controllers\ContactPageController::class , 'index'])->name("contact.index");
+    Route::post("contact", [\App\Http\Controllers\ContactPageController::class , 'save'])->name("admin.contact.save");
 
 
     Route::get('contacts' , [\App\Http\Controllers\Frontend\HomePageController::class , 'contacts'])->name('contacts.index') ;

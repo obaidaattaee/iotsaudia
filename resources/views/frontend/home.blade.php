@@ -39,7 +39,14 @@
                     </div>
                 </div>
                 <div class="col-xl-6" >
-                    <img src="{{ asset("uploads/public/".$settings->video_background_image) }}" width="100%" height="100%" alt="">
+                    <div class="single_instagram" >
+                        <div >
+                                        <a href="{{ asset('uploads/public/'.$settings->video_background_image) }}" class="img-pop-up">
+                                            <img src="{{ asset("uploads/public/".$settings->video_background_image) }}" width="100%" height="100%" alt="">
+                                        </a>
+                                    </div>
+                    </div>
+                    {{-- <img src="{{ asset("uploads/public/".$settings->video_background_image) }}" width="100%" height="100%" alt=""> --}}
                 </div>
             </div>
         </div>

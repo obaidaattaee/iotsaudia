@@ -1,40 +1,90 @@
 @extends(backpack_view('blank'))
+@section('css')
 
+                <script src="https://cdn.ckeditor.com/ckeditor5/23.0.0/classic/ckeditor.js"></script>
+@endsection
 @section("content")
-{{--{{ dd($usages) }}--}}
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="card">
-                <div class="card-header"><i class="fa fa-align-justify"></i> الرسائل الواردة
+<div class="card card-body">
+	<h1>{{ __("base.settings")}}</h1>
+
+	<center>
+		<form action="{{ route('admin.contact.save') }}" method="post" enctype="multipart/form-data">
+			@csrf
+{{--{{ dd($settings) }}--}}
+		<div class="col-sm-6" style="text-align: right;">
+                <div class="card">
+                  <div class="card-header">النبذة </div>
+                  <div class="card-body">
+                    <div class="form-group">
+                      <label for="company">العنوان</label>
+                      <input class="form-control" id="company" name="title" type="text"  placeholder="Enter your company name" value="{{ old('title') ?? $contact->title ?? "" }}">
+                    </div>
+                    <div class="form-group">
+                      <label for="vat">الوصف</label>
+                        <textarea class="form-control" id="editor" name="description" type="text" placeholder="description" >{{ old('description') ?? $contact->description ?? "" }}</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="street">الصورة الاولى</label>
+                        <input class="form-control" id="street" name="image_1_file" type="file" placeholder="Enter street name">
+                      </div>
+                      <div class="form-group">
+                        <label for="street">الصورة الحالية</label><br>
+                          <img src="{{ $contact ? asset('uploads/public/'.$contact->image_1) : "" }}" width="100px">
+                          </div>
+                          <div class="form-group">
+                            <label for="street">الصورة الثانية </label>
+                            <input class="form-control" id="street" name="image_2_file" type="file" placeholder="Enter street name">
+                          </div>
+                          <div class="form-group">
+                            <label for="street">الصورة الحالية</label><br>
+                              <img src="{{ $contact ? asset('uploads/public/'.$contact->image_2) : "" }}" width="100px">
+                              </div>
+                              <div class="form-group">
+                                <label for="street">الصورة الثالثة </label>
+                                <input class="form-control" id="street" name="image_3_file" type="file" placeholder="Enter street name">
+                              </div>
+                              <div class="form-group">
+                                <label for="street">الصورة الحالية</label><br>
+                                  <img src="{{$contact ?  asset('uploads/public/'.$contact->image_3) : "" }}" width="100px">
+                                  </div>
+                    <div class="form-group">
+                    	<input type="submit" value="save" class="btn btn-success">
+                    </div>
+                    <!-- /.row-->
+
+                  </div>
                 </div>
-                 <div class="card-body">
-                    <table class="table table-responsive-sm table-bordered table-striped table-hover table-sm">
-                        <thead>
-                        <tr>
-                            <th>الاسم</th>
-                            <th>البريد الالكتروني</th>
-                            <th>العنوان</th>
-                            <th>الرسالة</th>
+              </div>
+			</form>
+	</center>
+</div>
 
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach($contacts as $usage)
-                        <tr>
-{{--                            {{ dd(  $usage) }}--}}
-                            <td>{{ $usage->name }}</td>
-                            <td>{{ $usage->email }}</td>
-                            <td>{{ $usage->subject }}</td>
-                            <td>{{ $usage->message }}</td>
 
-                        </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
 
-                </div>
-            </div>
-        </div>
-        <!-- /.col-->
-    </div>
+
+@endsection
+
+@section('after_scripts')
+	<script>
+			ClassicEditor
+					.create( document.querySelector( '#editor' ) )
+					.then( editor => {
+							console.log( editor );
+					} )
+					.catch( error => {
+							console.error( error );
+					} );
+	</script>
+    @if ($errors->any())
+
+        <script>
+            @foreach ($errors->all() as $error)
+            new Noty({
+                text: "<strong>{{ $error }}</strong>",
+                type: "danger"
+            }).show();
+            @endforeach
+        </script>
+    @endif
+
 @endsection
