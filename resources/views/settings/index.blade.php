@@ -59,18 +59,29 @@
                       <input class="form-control" name="facebook_address" id="street" type="text" placeholder="Enter street name" value="{{ old("facebook_address") ?? $settings->facebook_address ?? "" }}">
                     </div>
                     <div class="form-group">
-                      <label for="street">رابط تويتر</label>
-                      <input class="form-control" name="twitter" id="street" type="text" placeholder="Enter street name" value="{{ old("twitter") ?? $settings->twitter ?? "" }}">
+                      <label for="street">صورة خريطة الموقع </label>
+                      <input class="form-control" id="street" name="twitter" type="file" placeholder="Enter street name">
                     </div>
+                    <div class="form-group">
+                      <label for="street">الصورة الحالية</label><br>
+                        <img src="{{ asset('uploads/public/'.$settings->twitter) ?? "" }}" width="100px">
+                        </div>
   <div class="form-group">
-                      <label for="street">رابط انستجرام</label>
-                      <input class="form-control" name="instagram" id="street" type="text" placeholder="Enter street name" value="{{ old("instagram") ?? $settings->instagram ?? "" }}">
+                      <label for="street">الصوره الاولى في صفحة التواصل </label>
+                      <input class="form-control" id="street" name="instagram" type="file" placeholder="Enter street name">
                     </div>
+                    <div class="form-group">
+                      <label for="street">الصورة الحالية</label><br>
+                        <img src="{{ asset('uploads/public/'.$settings->instagram) ?? "" }}" width="100px">
+                        </div>
   <div class="form-group">
-                      <label for="street">قناه اليوتيوب </label>
-                      <input class="form-control" name="youtube" id="street" type="text" placeholder="Enter street name" value="{{ old("youtube") ?? $settings->youtube ?? "" }}">
+                      <label for="street">الصورة الثانية في صفحة التواصل</label>
+                      <input class="form-control" id="street" name="youtube" type="file" placeholder="Enter street name">
                     </div>
-
+                    <div class="form-group">
+                      <label for="street">الصورة الحالية</label><br>
+                        <img src="{{ asset('uploads/public/'.$settings->youtube) ?? "" }}" width="100px">
+                        </div>
                     <div class="form-group">
                     	<input type="submit" value="save" class="btn btn-success">
                     </div>

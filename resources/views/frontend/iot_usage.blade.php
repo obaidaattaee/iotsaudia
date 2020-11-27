@@ -116,8 +116,6 @@
                 @endforeach
             </div>
             <!-- instragram_area_end -->
-            <div class="Visit_Work text-center">
-                <a href="{{ route('usages')}}" class="Visit_link">التطبيقات المستخدمة في انترنت الاشياء</a>
-            </div>
+           
 
 @endsection

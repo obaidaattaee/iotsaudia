@@ -31,11 +31,16 @@
     <div class="video_area">
         <div class="container-fluid p-0">
             <div class="row no-gutters">
-                <div class="col-xl-12" style="background-image: url('{{ asset("uploads/public/".$settings->video_background_image) }}')">
-                    <div class="video_banner " style="background-image: url('{{ asset("uploads/public/".$settings->video_background_image) }} ')">
+                <div class="col-xl-6" >
+                    <div class="video_banner " >
                         <a class="popup-video" href="{{ $settings->video_link }}">
                             <i class="fa fa-play"></i>
                         </a>
+                    </div>
+                </div>
+                <div class="col-xl-6" style="background-image: url('{{ asset("uploads/public/".$settings->video_background_image) }}')">
+                    <div class="video_banner " style="background-image: url('{{ asset("uploads/public/".$settings->video_background_image) }} ')">
+                        
                     </div>
                 </div>
             </div>
@@ -45,7 +50,7 @@
 
     <!-- "service_area_start -->
 <div class="service_area black_bg">
-    <h1 class="opacity_text d-none d-lg-block">Services</h1>
+    <h1 class="opacity_text d-none d-lg-block"></h1>
     <div class="container">
         <div class="row" style="text-align: right">
             <div class="col-xl-12">
@@ -164,9 +169,7 @@
         @endforeach
     </div>
     <!-- instragram_area_end -->
-    <div class="Visit_Work text-center">
-        <a href="#" class="Visit_link">Visit Our Work</a>
-    </div>
+  
 
 
 @endsection

@@ -12,8 +12,10 @@ class SettingController extends Controller
     public function index()
     {
         $settings = Settings::first();
+        // dd($settings);
         return view('settings.index')
             ->with('settings', $settings);
+            
     }
 
     public function save(\Illuminate\Http\Request $request)
@@ -27,19 +29,41 @@ class SettingController extends Controller
             "mobile_address" => ['required'],
             "location" => ['required'],
             "facebook_address" => ['required'],
-            "twitter" => ['required'],
-            "instagram" => ['required'],
-            "youtube" => ['required'],
         ]);
-        if (!empty($request['video_background_image_file']) || !empty($request['logo_image_file'])){
+        if (!empty($request['video_background_image_file'])){
             $video_background_image = basename($request['video_background_image_file']->store("public" , 'public'));
-            $logo_image = basename($request['logo_image_file']->store("public" , 'public'));
             $settings['video_background_image'] = $video_background_image;
-            $settings['logo_image'] = $logo_image;
-        }else{
-            $settings["logo_image"] = $setting->logo_image ;
+        }
+        else{
             $settings["video_background_image"] = $setting->video_background_image ;
-
+        }
+        if (!empty($request['logo_image_file'])) {
+            $logo_image = basename($request['logo_image_file']->store("public" , 'public'));
+            $settings['logo_image'] = $logo_image;
+        }
+        else{
+            $settings["logo_image"] = $setting->logo_image ;
+        }
+        if (!empty($request['youtube'])){
+            $contact_image_1_file = basename($request['youtube']->store("public" , 'public'));
+            $settings['youtube'] = $contact_image_1_file;
+        }
+        else{
+            $settings["youtube"] = $setting->youtube ;
+        }
+        if (!empty($request['instagram'])) {
+            $contact_image_2_file = basename($request['instagram']->store("public" , 'public'));
+            $settings['instagram'] = $contact_image_2_file;
+        }
+        else{
+            $settings["instagram"] = $setting->instagram ;
+        }
+        if (!empty($request['twitter'])) {
+            $twitter_file = basename($request['twitter']->store("public" , 'public'));
+            $settings['twitter'] = $twitter_file;
+        }
+        else{
+            $settings["twitter"] = $setting->twitter ;
         }
 
         if (Settings::first()){

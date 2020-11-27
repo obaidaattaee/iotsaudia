@@ -16,9 +16,9 @@
                                 <ul id="navigation">
 {{--                                    {{dd(\Route::current()->getName())}}--}}
                                     <li><a @if(\Route::current()->getName() == "home")class='active'@endif href="{{ route('home') }}">الرئيسية</a></li>
-                                    <li><a @if(\Route::current()->getName() == "advantage")class='active'@endif href="{{ route('advantage') }}"> الفرص المتاحه و دور الحكومة</a></li>
+                                    <li><a @if(\Route::current()->getName() == "about")class='active'@endif href="{{ route('about') }}">نبذه تعريفيه</a></li>
+                                    <li><a @if(\Route::current()->getName() == "advantage")class='active'@endif href="{{ route('advantage') }}">الفرص المتاحة و دور الجهات الجكومية</a></li>
                                     <li><a @if(\Route::current()->getName() == "usages")class='active'@endif href="{{ route('usages') }}">تطبيقات انترنت الاشياء</a></li>
-                                    <li><a @if(\Route::current()->getName() == "about")class='active'@endif href="{{ route('about') }}">من نحن</a></li>
                                     <li><a @if(\Route::current()->getName() == "contact")class='active'@endif href="{{ route('contact') }}">تواصل معنا</a></li>
                                 </ul>
                             </nav>
