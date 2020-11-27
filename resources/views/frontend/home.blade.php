@@ -38,10 +38,8 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-xl-6" style="background-image: url('{{ asset("uploads/public/".$settings->video_background_image) }}')">
-                    <div class="video_banner " style="background-image: url('{{ asset("uploads/public/".$settings->video_background_image) }} ')">
-                        
-                    </div>
+                <div class="col-xl-6" >
+                    <img src="{{ asset("uploads/public/".$settings->video_background_image) }}" width="100%" height="100%" alt="">
                 </div>
             </div>
         </div>
