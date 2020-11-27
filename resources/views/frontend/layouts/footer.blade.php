@@ -25,7 +25,7 @@
                             <li><a @if(\Route::current()->getName() == "about")class='active'@endif href="{{ route('about') }}">نبذه تعريفيه</a></li>
                             <li><a @if(\Route::current()->getName() == "advantage")class='active'@endif href="{{ route('advantage') }}">الفرص المتاحة و دور الجهات الجكومية</a></li>
                             <li><a @if(\Route::current()->getName() == "usages")class='active'@endif href="{{ route('usages') }}">تطبيقات انترنت الاشياء</a></li>
-                            <li><a @if(\Route::current()->getName() == "contact")class='active'@endif href="{{ route('contact') }}">خريطه الموقع</a></li>
+                            {{-- <li><a @if(\Route::current()->getName() == "contact")class='active'@endif href="{{ route('contact') }}">خريطه الموقع</a></li> --}}
                        
                         </ul>
 
