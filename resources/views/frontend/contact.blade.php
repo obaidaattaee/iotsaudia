@@ -44,8 +44,8 @@
                     </div>
                 </div>
                 <div class="col-lg-8">
-                    <img src="{{ asset('uploads/public/'.$settings->youtube) ?? "" }}" alt="" style="max-height: 200px; min-width: 500px;"><br>
-                    <img src="{{ asset('uploads/public/'.$settings->instagram) ?? "" }}" alt="" style="max-height: 200px; min-width: 500px; margin-top: 20px">
+                    <img src="{{ asset('uploads/public/'.$settings->youtube) ?? "" }}" alt="" style="max-height: 200px; width: 100%"><br>
+                    <img src="{{ asset('uploads/public/'.$settings->instagram) ?? "" }}" alt="" style="max-height: 200px;width: 100%; margin-top: 20px">
                 </div>
             </div>
         </div>

@@ -14,8 +14,13 @@
                             الروابط
                         </h3>
                         <ul>
-                            
-                            <li><a  href="{{ asset('uploads/public/'.$settings->twitter) ?? "" }}">خريطة الموقع</a></li>
+                            <div class="single_instagram" >
+                                <div >
+                                                <a href="{{ asset('uploads/public/'.$settings->twitter) ?? "" }}" class="img-pop-up">خريطة الموقع
+                                                    {{-- <div class="single-gallery-image" style="background: url({{ asset('uploads/public/'.$image->image) }});"></div> --}}
+                                                </a>
+                                            </div>
+                            </div>
                             <li><a @if(\Route::current()->getName() == "home")class='active'@endif href="{{ route('home') }}">الرئيسية</a></li>
                             <li><a @if(\Route::current()->getName() == "about")class='active'@endif href="{{ route('about') }}">نبذه تعريفيه</a></li>
                             <li><a @if(\Route::current()->getName() == "advantage")class='active'@endif href="{{ route('advantage') }}">الفرص المتاحة و دور الجهات الجكومية</a></li>
