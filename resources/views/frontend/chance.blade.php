@@ -31,11 +31,16 @@
     <div class="video_area">
         <div class="container-fluid p-0">
             <div class="row no-gutters">
-                <div class="col-xl-12" style="background-image: url('{{ asset("uploads/public/".$settings->video_background_image) }}')">
-                    <div class="video_banner " style="background-image: url('{{ asset("uploads/public/".$settings->video_background_image) }} ')">
+                <div class="col-xl-6" >
+                    <div class="video_banner " >
                         <a class="popup-video" href="{{ $settings->video_link }}">
                             <i class="fa fa-play"></i>
                         </a>
+                    </div>
+                </div>
+                <div class="col-xl-6" style="background-image: url('{{ asset("uploads/public/".$settings->video_background_image) }}')">
+                    <div class="video_banner " style="background-image: url('{{ asset("uploads/public/".$settings->video_background_image) }} ')">
+                        
                     </div>
                 </div>
             </div>
